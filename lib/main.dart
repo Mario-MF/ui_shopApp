@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/modules/welcome/welcome_screen.dart';
 
 import 'models/home_screen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

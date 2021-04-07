@@ -151,6 +151,16 @@ class HomeScreen extends StatelessWidget {
                       )),
                 ],
               ),
+              SizedBox(height: 12,),
+
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => DetailsScreen()));
+                },
+                child: Container(
+                    height: 180, width: double.infinity, child: hotOffers()),
+              ),
+
 
             ],
           ),

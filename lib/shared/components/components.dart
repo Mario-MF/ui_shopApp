@@ -214,3 +214,58 @@ Widget hotOffers() {
     ],
   );
 }
+Widget drfaultButtom(
+    {@required String text,
+      @required function,
+      double fontSize,
+      Color color = Colors.white,
+      Color btncolor ,
+      Color borderColor=Colors.white ,
+
+      icon}) =>
+    Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          border: Border.all(color: borderColor)
+        ),
+        child: ElevatedButton(
+          onPressed: function,
+          child: Text(
+            text,
+            style: TextStyle(fontSize: fontSize, color: color),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(btncolor)),
+        ));
+
+void navigateTo(context, widget) => Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => widget,
+  ),
+);
+
+void navigateAndFinish({context, widget}) => Navigator.pushAndRemoveUntil(
+    context,
+    MaterialPageRoute(
+      builder: (context) => widget,
+    ),
+        (Route<dynamic> route) => false);
+Widget defaultForm(
+    {@required String hintText, @required icon, controller, validator}) =>
+    TextFormField(
+      controller: controller,
+      validator: validator,
+      decoration: InputDecoration(
+        isDense: true, // important line
+        contentPadding: EdgeInsets.fromLTRB(12, 12, 12, 12),
+        prefixIcon: Icon(icon),
+        border: OutlineInputBorder(
+
+
+
+        ),
+        hintText: hintText,
+      ),
+    );
+
