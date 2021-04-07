@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shop/shared/components/components.dart';
+import 'package:shop/shared/styles/colors.dart';
 import 'package:shop/shared/styles/styles.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -118,7 +119,7 @@ class DetailsScreen extends StatelessWidget {
                         child: RaisedButton(
                           child: Text('Add To Cart',style: TextStyle(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold),),
                            onPressed: (){},
-                          color: Color(0xffffa52e),
+                          color: defaultColor,
                           elevation: 0,
 
                         ),
